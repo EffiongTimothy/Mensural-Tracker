@@ -1,10 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Period from'./component/period'
+import OpeningPage from './component/page/openingPage'
+import Calendar from 'react-calendar';
+import { BrowserRouter as Router, Routes,Route} from 'react-router-dom';
+import About from './component/page/about';
+import Reduce from './component/page/increase';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <Reduce/> */}
+      <Router>
+        <Routes>
+          <Route path='/' element={<OpeningPage/>}/>
+      <Route path='/start' element={<Period/>}/>
+      <Route path='/About' element={<About/>}/>
+      </Routes>
+      </Router>
+      {/* <Calendar/> */}
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +32,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }

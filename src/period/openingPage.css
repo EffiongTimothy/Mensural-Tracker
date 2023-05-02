@@ -1,0 +1,113 @@
+body {
+    background-image: url('../image/TSHH1497.png');
+    background-repeat:no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    filter: blur(3.5px); 
+    z-index: -1;
+  }
+   */
+.link{
+    position:absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(0%, 90%);
+    background: linear-gradient(to bottom, rgba(255, 4, 142, 2));
+    font-size: 90px;
+    color:limegreen;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.y{
+    padding: 5%;
+    display: grid;
+    justify-content: start;
+    padding-bottom: 32%;
+    width: 90%;
+    height: 23.2%;
+    background: linear-gradient(to bottom, rgba(255, 4, 142, 0.8), rgba(255, 4, 142,0));
+    clip-path: polygon(100% 68%,100% 100%, 0% 100%, 0% 0%);
+}
+
+.y h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    margin: 20% 10%;
+    transform: scale(3);
+    width: 2%;
+}
+.u::first-letter{
+    font-size:50px;
+}
+.u::first-line{
+    color:rgb(192, 240, 252);
+}
+.slogan{
+    margin: 10% 20%;
+    transform: scale(2.3);
+    color: white;
+    width: 40%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.clock{
+    width: 89.6px;
+    height: 89.6px;
+    border: 4.5px solid blue;
+    box-sizing: content-box;
+    position:absolute;
+    top: 65%;
+    left: 15%;
+    transform: translate(0%, 90%);
+}
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 4.5px;
+    height: 38.1px;
+    top: 9px;
+    left: 42.6px;
+    background: blue;
+    border-radius: 2.2px;
+    transform-origin: 2.25px 37px;
+    animation: clock 6s linear infinite;
+}
+.clock::after{
+    content: "";
+    position: absolute;
+    width: 4.5px;
+    height: 24.6px;
+    top: 22.4px;
+    left: 42.6px;
+    background: blue;
+    border-radius: 2.2px;
+    transform-origin: 2.25px 23.5px;
+    animation: clock 12s linear infinite;
+}
+@keyframes clock{
+    0%{
+        transform: rotate(-360deg);
+    }
+
+}
+.clock:hover::before{
+    animation: -clock 12s linear infinite;
+}
+.clock:hover::after{
+    animation: -clock 2s linear infinite;
+
+}
+@keyframes -clock{
+    0%{
+        transform: rotate(360deg);
+        transform: scale(1.2);
+    }
+}
